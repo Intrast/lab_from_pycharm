@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <div class="container d-flex flex-md-row">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Portfolio</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="/">Home</a>
+                <a class="p-2 text-dark" href="/about">About me</a>
+                <a class="p-2 text-dark" href="/hobby">My Hobby</a>
+            </nav>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="card">
+                {% block body %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
